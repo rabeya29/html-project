@@ -1,0 +1,52 @@
+button{
+    position: relative;
+    width: 120px;
+    height: 35px;
+   background:none;
+    color:red;
+    outline: none;
+    border:none;
+    font-size: 22px;
+    z-index: 2;
+    cursor: pointer;
+    transition:.5s;
+}
+button::before{
+    content:"";
+    position: absolute;
+    width: 50%;
+    height:50%;
+    background: none;
+    top:0;
+    left:0;
+    border-top:3px solid green;
+    border-left: 3px solid green;
+    transition:.5s;
+}
+button::after{
+    content:"";
+    position: absolute;
+    width: 50%;
+    height:50%;
+    background: none;
+    bottom:0;
+   right:0;
+    border-bottom:3px solid green;
+    border-right: 3px solid green;
+    transition:.5s;
+}
+button:hover{
+    background: green;
+    color:white;
+}
+button:hover::before{
+    width:110%;
+    height:110%;
+    border-color: red;
+   
+}
+button:hover::after{
+    width:110%;
+    height:110%;
+    border-color: red;
+}
